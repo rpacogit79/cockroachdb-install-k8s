@@ -1,5 +1,21 @@
 # cockroachdb-install-k8s
 
+To Install cockroachdb,
+
+kubectl create ns cockroach-operator-system
+
+kubectl config set-context --current --namespace cockroach-operator-system
+
+kubectl apply -f crds.yaml
+
+kubectl apply -f operator.yaml
+
+kubectl apply -f example.yaml
+
+
+Detailed information can be found thru cockroachdb Official Git Repo: https://github.com/cockroachdb/cockroach-operator
+
+
 Install the Operator
 Apply the custom resource definition (CRD) for the Operator:
 
